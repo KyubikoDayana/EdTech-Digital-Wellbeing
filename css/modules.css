@@ -1,0 +1,240 @@
+
+/* ===== MODULE HEADER ===== */
+
+.module-header{
+text-align:center;
+padding:80px 20px 40px;
+max-width:900px;
+margin:auto;
+}
+
+.module-label{
+display:inline-block;
+background:#F2A999;
+color:white;
+padding:6px 16px;
+border-radius:20px;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.module-title{
+font-size:36px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.module-intro{
+color:#6b8b87;
+font-size:16px;
+margin-top:10px;
+}
+
+.module-content{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+.module-card-horizontal{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#F3ECDD;
+padding:35px;
+border-radius:18px;
+margin-bottom:40px;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.module-text{
+max-width:600px;
+}
+
+.module-icon img{
+width:220px;
+height:auto;
+}
+
+.module-interaction{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+max-width:520px;
+margin:80px auto;
+text-align:center;
+}
+
+.quiz-slider{
+width:100%;
+margin-top:20px;
+}
+
+.slider-labels{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+margin-top:5px;
+color:#777;
+}
+
+.quiz-feedback{
+margin-top:15px;
+font-weight:500;
+}
+
+.next-module-btn{
+display:inline-block;
+margin-top:25px;
+text-decoration:none;
+}
+
+.habit-checklist{
+
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:20px;
+text-align:left;
+
+}
+
+.habit-checklist label{
+
+background:#f3f6f5;
+padding:10px 15px;
+border-radius:10px;
+cursor:pointer;
+transition:0.2s;
+
+}
+
+.habit-checklist label:hover{
+
+background:#e5efec;
+
+}
+/* ===== HABIT RESULT HIGHLIGHT ===== */
+.habit-result{
+font-weight:700;
+color:#96CCBF;
+font-size:16px;
+margin-bottom:15px;
+}
+
+/* ===== PASSWORD GUIDE ===== */
+
+.password-guide{
+
+background:#f6faf9;
+
+border-left:5px solid #6fa79d;
+
+padding:18px 20px;
+
+margin:20px auto;
+
+border-radius:10px;
+
+text-align:left;
+
+font-size:14px;
+
+max-width:420px;
+
+}
+
+.password-guide h4{
+
+margin-top:0;
+
+font-size:15px;
+
+color:#355e5a;
+
+}
+
+.password-guide ul{
+
+padding-left:18px;
+
+margin:10px 0 0 0;
+
+}
+
+.password-guide li{
+
+margin-bottom:6px;
+
+color:#5f7f7b;
+
+}
+
+/* ===== WEEKLY PLAN TABLE ===== */
+
+.plan-table{
+
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+font-size:14px;
+table-layout:fixed;
+
+}
+
+.plan-header th{
+
+background:#CDE7E6;
+text-align:center;
+font-weight:600;
+
+}
+
+.plan-day{
+
+background:#8EC0B1;
+font-weight:600;
+width:120px;
+
+}
+
+.plan-rest{
+
+background:#f6faf9;
+
+}
+
+.plan-table td,
+.plan-table th{
+
+border:1px solid #AEC99E;
+padding:10px;
+text-align:left;
+
+}
+
+.plan-day{
+
+background:#F3ECDD;
+font-weight:600;
+width:120px;
+
+}
+
+.plan-rest{
+
+background:#f6faf9;
+color:#6fa79d;
+font-weight:600;
+
+}
+.screen-message{
+margin-top:20px;
+padding:18px;
+background:#f6f8fb;
+border-radius:10px;
+line-height:1.6;
+max-width:700px;
+}

@@ -1,0 +1,85 @@
+
+body{
+
+background-image: url("../Archives/illustrations/fondo-5.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+
+/* HERO */
+
+.info-hero{
+background: linear-gradient(180deg,#e6f0ed,#e9f1ef);
+padding:100px 20px 80px;
+text-align:center;
+}
+
+.hero-content h1{
+font-size:42px;
+max-width:800px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:18px;
+max-width:600px;
+margin:auto;
+color:#4b6d69;
+}
+
+
+/* CARDS */
+
+.info-cards{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:-40px;
+margin-bottom:60px;
+flex-wrap:wrap;
+}
+
+.info-cards .card{
+width:280px;
+}
+
+
+/* CONTENT */
+
+.info-container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.info-block h2{
+margin-bottom:10px;
+}
+
+.info-block p{
+line-height:1.7;
+margin-bottom:10px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:32px;
+}
+
+.info-cards{
+flex-direction:column;
+align-items:center;
+}
+
+}

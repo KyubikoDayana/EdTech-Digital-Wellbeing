@@ -1,0 +1,724 @@
+
+
+:root {
+  --primary: #7FB8A6;
+  --secondary: #F4B6A6;
+  --background: #F6FBFA;
+  --card-bg: #FFFFFF;
+  --text-main: #4A6A65;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+margin:0;
+background:#e9f1ef;
+color:#355e5a;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 40px;
+
+background:white;
+
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+}
+
+.logo-icon{
+width:38px;
+height:38px;
+object-fit:contain;
+filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
+}
+
+.logo-text{
+font-size:18px;
+margin:0;
+font-weight:600;
+}
+
+.nav-actions button{
+
+border:1px solid #ccc;
+
+background:white;
+
+padding:5px 10px;
+
+margin-left:6px;
+
+border-radius:5px;
+
+cursor:pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 100px 80px;
+
+  background-image: url("Archives/illustrations/Fondo-principal.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 420px;
+}
+
+.hero-text {
+  max-width: 520px;
+  background: rgba(255,255,255,0.0);
+}
+
+.hero-text h1{
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-text p{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+/* MODULES */
+.modules {
+  padding: 40px;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #eee;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 6px;
+  background: var(--primary);
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* CONTENT */
+.content {
+  padding: 40px;
+}
+
+/* QUIZ */
+.quiz {
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* BENEFITS */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+}
+.module-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.dark {
+  --background: #1E2A28;
+  --card-bg: #2E3A38;
+  --text-main: #E4F1EE;
+}
+@media(max-width:768px){
+  .hero {
+    flex-direction: column;
+  }
+
+  .module-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+section {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* ==== MODULE PAGES ==== */
+
+.module-hero {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.progress-section {
+  padding: 20px 40px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e0f0ec;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.4s ease;
+}
+
+.subsection {
+  padding: 60px 40px;
+}
+
+.sub-content {
+  display: flex;
+  gap: 40px;
+}
+
+.text-area {
+  flex: 1;
+}
+
+.media-area {
+  flex: 1;
+}
+
+.image-placeholder {
+  background: var(--card-bg);
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-box {
+  margin-top: 20px;
+}
+
+.module-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+.module-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* SECTION WITH BACKGROUND IMAGE */
+
+.info-background { 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  background-image: url("Archives/illustrations/fondo-2.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 80px 5%; 
+  gap: 50px; 
+  min-height: 500px; 
+}
+.content {
+  flex: 1;
+  max-width: 500px;
+  padding: 0;
+
+  margin-left: 160px;   /* mueve el bloque hacia la derecha */
+  margin-top: 60px;     /* lo baja un poco */
+}
+/* MODULE IMAGE STYLE */
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px; 
+  align-items: stretch;
+}
+
+.module-card {
+  background: #ffffff;
+  border-radius: 25px; 
+  text-decoration: none;
+  color: #4A6A65;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  padding: 0; 
+}
+
+.module-card:hover {
+  transform: translateY(-8px);
+}
+
+
+.module-img {
+  width: 100%;       
+  height: 140px;     
+  object-fit: cover; 
+  display: block;
+  margin: 0;
+  border-bottom: none;
+}
+
+
+.module-card-content {
+  padding: 15px 10px 20px 10px; 
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.progress-bar {
+  height: 8px;
+  background: #E8F4F1;
+  border-radius: 10px;
+  margin: 15px 15px 10px 15px; 
+}
+
+/* ESTILO del QUIZ  */
+.quiz {
+  flex: 0 0 400px; /* IMPORTANTE: No crece, no se encoge, siempre mide 400px */
+  background: white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  box-sizing: border-box; /* Para que el padding no sume al ancho */
+}
+
+.quiz h3 {
+  text-align: center;
+  color: #4A6A65;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.quiz-item {
+  margin-bottom: 30px;
+}
+
+.quiz-item label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Estilo de la barra (Slider) */
+.quiz-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4A6A65, #7FB8A6, #F4B6A6);
+  outline: none;
+  margin: 15px 0 5px 0;
+}
+
+/* Estilo del círculo que se mueve */
+.quiz-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--thumb-color, #7FB8A6); /* Usaremos una variable de JS */
+  border: 3px solid white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.2s ease;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.slider-labels span {
+  font-size: 11px;
+  color: #888;
+}
+
+.quiz-feedback {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  min-height: 60px;
+}
+
+.quiz-slider[value="0"]::-webkit-slider-thumb { background: #4A6A65 !important; }
+.quiz-slider[value="1"]::-webkit-slider-thumb { background: #7FB8A6 !important; }
+.quiz-slider[value="2"]::-webkit-slider-thumb { background: #F4B6A6 !important; }
+
+/* Seccion informacion abajo */
+
+.informacion {
+  padding: 60px 40px;
+  background: #F6FBFA; 
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.informacion-title {
+  font-size: 28px;
+  color: #4A6A65;
+  margin-bottom: 40px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background: white;
+  border-radius: 25px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px); 
+}
+
+.info-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-content {
+  padding: 25px;
+  text-align: left;
+}
+
+.info-content h4 {
+  margin: 0 0 10px 0;
+  color: #4A6A65;
+}
+
+.info-content p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.btn-card {
+  margin-top: 15px;
+  background: #E8F4F1;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 15px;
+  color: #7FB8A6;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*Footer*/
+.main-footer {
+  background-color: #7FB8A6; /* Tu color solicitado */
+  color: white;
+  padding: 40px 80px;
+  margin-top: 0; /* Se une perfectamente con la sección de información */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  max-width: 600px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer-info a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 15px 0;
+}
+
+.unad-logo {
+  max-width: 180px; /* Ajusta el tamaño del logo */
+  height: auto;
+  filter: brightness(0) invert(1); /* Opcional: vuelve el logo blanco si es oscuro */
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .footer-info {
+    order: 2;
+  }
+  
+  .footer-logo {
+    order: 1;
+  }
+}
+.info-box-white {
+  background: white;
+  padding: 35px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Agrandar letras de EdTech para mejor UX */
+.info-box-white h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #4A6A65;
+}
+
+.info-box-white p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* HERO IMAGE (CORTINA QUE SUBE) */
+
+.hero{
+  opacity:0;
+  transform: translateY(120px);
+  transition: all 1s ease;
+}
+
+.hero.visible{
+  opacity:1;
+  transform: translateY(0);
+}
+
+
+/* HERO TEXT (ENTRADA DESDE LA IZQUIERDA) */
+
+.hero-text h1,
+.hero-text p,
+.hero-text .btn-primary{
+  opacity:0;
+  transform: translateX(-80px);
+  transition: all 0.8s ease;
+}
+
+
+/* estados visibles */
+
+.hero-text h1.visible{
+  opacity:1;
+  transform: translateX(0);
+}
+
+.hero-text p.visible{
+  opacity:1;
+  transform: translateX(0);
+}
+
+.hero-text .btn-primary.visible{
+  opacity:1;
+  transform: translateX(0);
+}
+
+
+/* MICRO ANIMACION AL PASAR EL MOUSE */
+
+.hero-text h1:hover,
+.hero-text p:hover{
+  transform: translateX(4px) translateY(-1px);
+  transition: transform 0.2s ease;
+  }
+
+  /* ===== START BUTTON ===== */
+
+/* hover */
+
+.btn-start:hover{
+
+background:#f38f7e;
+
+border-color:#d97c6e;
+
+transform:translateY(-2px);
+
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+/* click */
+
+.btn-start:active{
+
+transform:scale(0.96);
+
+}
+
+/* ESTILO PARA EL BOTÓN NEXT */
+.btn-primary {
+  display: inline-block;
+  background-color: #F4B6A6; 
+  color: white;
+  padding: 12px 35px;
+  border-radius: 50px; 
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #f38f7e; 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 182, 166, 0.4);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+
+/* ESTILO PARA EL ENLACE START */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FCA292; 
+  color: #FFFFFF;           
+  padding: 12px 35px;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(252, 162, 146, 0.3); 
+  outline: none;
+}
+
+/* Animaciones hover para mejorar UX */
+.btn-primary:hover {
+  background-color: #f38f7e; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(252, 162, 146, 0.4);
+}
+
+/* Micro-interacción al hacer click */
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+.quiz .btn-primary {
+  margin-top: 20px;
+  display: block;
+  width: fit-content;
+  background-color: #f4b6a6; 
+  border-radius: 25px;
+  padding: 10px 40px;
+}
+
+/* Estilo de los textos "Rarely", "Sometimes" */
+.slider-labels span {
+  font-size: 12px;
+  color: #8e8e8e;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TITULO DE LOS MODULOS */
+
+.module-title{
+font-size:16px;
+font-weight:700;
+color:#4A6A65;
+margin-bottom:3px;
+display:block;
+}
+
+.module-title{
+font-size:16px;
+font-weight:700;
+color:#4A6A65;
+margin-bottom:3px;
+display:block;
+}
