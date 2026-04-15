@@ -2,7 +2,7 @@
 
 :root {
   --primary: #7FB8A6;
-  --secondary: #F4B6A6;
+  --secondary: #FA7E77;
   --background: #F6FBFA;
   --card-bg: #FFFFFF;
   --text-main: #4A6A65;
@@ -403,7 +403,7 @@ section {
 
 .quiz-slider[value="0"]::-webkit-slider-thumb { background: #4A6A65 !important; }
 .quiz-slider[value="1"]::-webkit-slider-thumb { background: #7FB8A6 !important; }
-.quiz-slider[value="2"]::-webkit-slider-thumb { background: #F4B6A6 !important; }
+.quiz-slider[value="2"]::-webkit-slider-thumb { background: #FA7E77 !important; }
 
 /* Seccion informacion abajo */
 
@@ -612,9 +612,9 @@ section {
 
 .btn-start:hover{
 
-background:#f38f7e;
+background:#FA7E77;
 
-border-color:#d97c6e;
+border-color:#FA7E77;
 
 transform:translateY(-2px);
 
@@ -633,7 +633,7 @@ transform:scale(0.96);
 /* ESTILO PARA EL BOTÓN NEXT */
 .btn-primary {
   display: inline-block;
-  background-color: #F4B6A6; 
+  background-color: #FA7E77; 
   color: white;
   padding: 12px 35px;
   border-radius: 50px; 
@@ -648,7 +648,7 @@ transform:scale(0.96);
 }
 
 .btn-primary:hover {
-  background-color: #f38f7e; 
+  background-color: #FA7E77; 
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(244, 182, 166, 0.4);
 }
@@ -663,7 +663,7 @@ transform:scale(0.96);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #FCA292; 
+  background-color: #FA7E77; 
   color: #FFFFFF;           
   padding: 12px 35px;
   font-size: 16px;
@@ -679,7 +679,7 @@ transform:scale(0.96);
 
 /* Animaciones hover para mejorar UX */
 .btn-primary:hover {
-  background-color: #f38f7e; 
+  background-color: #FA7E77; 
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(252, 162, 146, 0.4);
 }
@@ -693,7 +693,7 @@ transform:scale(0.96);
   margin-top: 20px;
   display: block;
   width: fit-content;
-  background-color: #f4b6a6; 
+  background-color: #FA7E77; 
   border-radius: 25px;
   padding: 10px 40px;
 }
