@@ -66,6 +66,21 @@ border-radius:5px;
 cursor:pointer;
 }
 
+/* RESET VISUAL PARA EL LOGO COMO LINK */
+
+.logo,
+.logo:visited,
+.logo:hover,
+.logo:active,
+.logo:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo:focus {
+  outline: none;
+}
+
 /* HERO */
 .hero {
   display: flex;
