@@ -140,4 +140,23 @@ sessionStorage.setItem("module1","true")
 
 }
 
+// ===== ACCORDION SYSTEM =====
+
+function initAccordion(){
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(acc => {
+        const header = acc.querySelector(".accordion-header");
+
+        header.addEventListener("click", () => {
+            acc.classList.toggle("active");
+        });
+    });
+}
+
+// iniciar acordeones sin romper nada
+window.addEventListener("DOMContentLoaded", () => {
+    initAccordion();
+});
+
 

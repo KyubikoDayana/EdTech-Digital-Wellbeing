@@ -250,3 +250,39 @@ border-radius:10px;
 line-height:1.6;
 max-width:700px;
 }
+
+/* ===== ACCORDION SYSTEM ===== */
+
+.accordion {
+cursor: pointer;
+transition: 0.3s;
+}
+
+.accordion-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+.accordion-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.4s ease;
+width: 100%;
+}
+
+.accordion.active .accordion-content {
+max-height: 500px; /* suficiente para tu contenido */
+margin-top: 20px;
+}
+
+/* efecto visual al hacer hover */
+.accordion:hover {
+transform: scale(1.01);
+}
+
+/* opcional: animación suave */
+.accordion-content p {
+margin-bottom: 15px;
+}
