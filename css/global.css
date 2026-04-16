@@ -142,17 +142,37 @@ cursor:pointer;
 /* ===== BACKGROUND IMAGE SYSTEM ===== */
 
 .bg-digital{
+position: relative;
 
 background-image: url("../Archives/illustrations/fondo-5.png");
-
 background-size: cover;
-
 background-position: center;
-
 background-repeat: no-repeat;
-
 background-attachment: fixed;
 
+}
+
+/* CAPA PARA BAJAR OPACIDAD DEL FONDO SIN AFECTAR CONTENIDO */
+
+.bg-digital::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+
+/* Ajusta aquí la intensidad */
+background: rgba(255, 255, 255, 0.35);
+
+z-index: 0;
+}
+
+/* ASEGURA QUE EL CONTENIDO ESTÉ ENCIMA */
+
+.bg-digital > *{
+position: relative;
+z-index: 1;
 }
 
 /* ===== PAGE LOAD SWEEP ANIMATION ===== */
