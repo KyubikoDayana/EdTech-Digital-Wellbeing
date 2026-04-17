@@ -290,7 +290,8 @@ margin-bottom: 15px;
 /* ===== FIX VISUAL ACCORDION (CARD 1) ===== */
 
 .accordion {
-padding: 35px; /* igual que la card original */
+padding: 45px 35px; /* más aire */
+background: #F3ECDD;
 }
 
 /* HEADER BIEN CENTRADO */
@@ -304,7 +305,8 @@ width: 100%;
 /* TEXTO CENTRADO VERTICALMENTE */
 .accordion-header h2 {
 margin: 0;
-flex: 1;
+flex: unset; /* QUITA el flex:1 */
+font-size: 22px;
 }
 
 /* ICONO MÁS LIMPIO Y ALINEADO */
@@ -315,7 +317,7 @@ justify-content: center;
 }
 
 .accordion-header .module-icon img {
-width: 180px; /* un poco más pequeño = más elegante */
+width: 200px; /* más grande como tu referencia */
 height: auto;
 }
 
@@ -330,10 +332,20 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 /* TEXTO INTERNO MEJOR ESPACIADO */
-.accordion-content p {
-max-width: 650px;
+.accordion-header {
+max-width: 800px;
+margin: auto;
 }
 
 .accordion-header {
-text-align: left;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+text-align: center;
+}
+
+.accordion {
+border: 2px solid #355e5a; /* verde oscuro elegante */
+border-radius: 18px;
 }
