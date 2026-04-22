@@ -3,11 +3,63 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root {
+  --fs-title: 42px;
+  --fs-subtitle: 26px;
+  --fs-section: 20px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+
+  --fw-bold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-loose: 1.7;
+}
+
 body{
-font-family:'Poppins', sans-serif;
-margin:0;
-background:#e9f1ef;
-color:#355e5a;
+  font-family:'Poppins', sans-serif;
+  margin:0;
+  background:#e9f1ef;
+  color:#355e5a;
+
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: #2f4f4a;
+}
+
+h1 {
+  font-size: var(--fs-title);
+}
+
+h2 {
+  font-size: var(--fs-subtitle);
+}
+
+h3 {
+  font-size: var(--fs-section);
+}
+
+p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-loose);
+  margin-bottom: 16px;
+  color: #4A6A65;
+}
+
+li {
+  font-size: var(--fs-body);
+  line-height: var(--lh-loose);
+  margin-bottom: 10px;
 }
 
 /* NAVBAR */

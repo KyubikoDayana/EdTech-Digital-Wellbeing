@@ -8,6 +8,24 @@
   --text-main: #4A6A65;
 }
 
+/* ===== SISTEMA TIPOGRAFICO ===== */
+
+:root {
+  --fs-title: 42px;
+  --fs-subtitle: 26px;
+  --fs-section: 20px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+
+  --fw-bold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-loose: 1.7;
+}
+
 body{
 font-family:'Poppins', sans-serif;
 margin:0;
@@ -103,15 +121,16 @@ cursor:pointer;
 }
 
 .hero-text h1{
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  margin-bottom: 16px;
 }
 
 .hero-text p{
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 25px;
+  font-size: var(--fs-section);
+  line-height: var(--lh-normal);
 }
+
 /* MODULES */
 .modules {
   padding: 40px;
@@ -332,10 +351,11 @@ section {
 
 
 .module-card-content {
-  padding: 15px 10px 20px 10px; 
+  padding: 15px 10px 20px 10px;
   text-align: center;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-small);
+  line-height: var(--lh-normal);
 }
 
 
@@ -357,6 +377,8 @@ section {
 }
 
 .quiz h3 {
+  font-size: var(--fs-section);
+  font-weight: var(--fw-bold);
   text-align: center;
   color: #4A6A65;
   border-bottom: 1px solid #eee;
