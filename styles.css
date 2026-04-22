@@ -818,4 +818,24 @@ padding:10px;
 text-align:center;
 }
 
+/* ===== FIX SECCION FONDO + QUIZ EN MOVIL ===== */
+
+.info-background{
+  flex-direction: column;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.content{
+  margin-left: 0;
+  margin-top: 0;
+  max-width: 100%;
+}
+
+.quiz{
+  flex: unset;          /* elimina el 400px forzado */
+  width: 100%;
+  max-width: 100%;
+}
+
 }
