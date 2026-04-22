@@ -739,3 +739,83 @@ color:#4A6A65;
 margin-bottom:3px;
 display:block;
 }
+
+/* ===== HOME FIX (SOLO AJUSTES RESPONSIVE) ===== */
+
+@media (max-width:768px){
+
+/* ===== TEXTO ===== */
+.content-text{
+padding:10px;
+}
+
+.content-text p{
+font-size:15px;
+line-height:1.6;
+margin-bottom:14px;
+}
+
+/* ===== INFO BOX ===== */
+.info-box-white{
+padding:20px;
+}
+
+/* ===== QUIZ ===== */
+.quiz{
+padding:20px;
+}
+
+.quiz-item{
+margin-bottom:20px;
+}
+
+/* ===== GRID CARDS ===== */
+.info-grid{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+/* ===== CARDS ===== */
+.info-card{
+width:100%;
+display:flex;
+flex-direction:column;
+}
+
+.info-img{
+width:100%;
+height:auto;
+}
+
+.info-content{
+padding:15px;
+}
+
+.info-content p{
+font-size:14px;
+line-height:1.5;
+}
+
+/* ===== BOTONES ===== */
+.btn-card{
+width:100%;
+text-align:center;
+}
+
+/* ===== MODULE CARDS ===== */
+.module-card{
+flex-direction:column;
+}
+
+.module-img{
+width:100%;
+height:auto;
+}
+
+.module-card-content{
+padding:10px;
+text-align:center;
+}
+
+}
