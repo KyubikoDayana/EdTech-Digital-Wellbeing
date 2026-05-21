@@ -178,3 +178,6 @@ body.acc-xlarge h1, body.acc-xlarge h2, body.acc-xlarge h3,
 body.acc-xlarge p, body.acc-xlarge li, body.acc-xlarge span {
   font-size: 1.35em; /* Multiplica su tamaño base actual por 1.35 */
 }
+body.acc-xlarge #accessibility-panel {
+  width: 260px; 
+}
