@@ -18,14 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
 
-      document.body.classList.remove("acc-large", "acc-xlarge");
+      // Ahora solo necesitamos remover "acc-large"
+      document.body.classList.remove("acc-large");
 
       if (btn.dataset.size === "large") {
         document.body.classList.add("acc-large");
-      }
-
-      if (btn.dataset.size === "xlarge") {
-        document.body.classList.add("acc-xlarge");
       }
 
     });
