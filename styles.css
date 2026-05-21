@@ -940,16 +940,19 @@ text-align:center;
 
 /* TEXTO ESCALADO SUAVE */
 body.acc-large {
-  transform: scale(1.05);
-  transform-origin: top center;
+  font-size: 118%; /* Aumenta un 18% los textos */
 }
 
 body.acc-xlarge {
-  transform: scale(1.12);
-  transform-origin: top center;
+  font-size: 135%; /* Aumenta un 35% los textos */
 }
 
-body.acc-large #accessibility-container,
-body.acc-xlarge #accessibility-container {
-  transform: none;
+body.acc-large h1, body.acc-large h2, body.acc-large h3, 
+body.acc-large p, body.acc-large li, body.acc-large span {
+  font-size: 1.18em; /* Multiplica su tamaño base actual por 1.18 */
+}
+
+body.acc-xlarge h1, body.acc-xlarge h2, body.acc-xlarge h3, 
+body.acc-xlarge p, body.acc-xlarge li, body.acc-xlarge span {
+  font-size: 1.35em; /* Multiplica su tamaño base actual por 1.35 */
 }
