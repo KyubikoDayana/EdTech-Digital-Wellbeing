@@ -103,3 +103,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+/* =========================
+      Barra de proceso modules
+     ========================= */
+document.addEventListener("DOMContentLoaded", () => {
+    const progressFill = document.getElementById("main-progress-fill");
+    const progressText = document.getElementById("progress-text");
+    
+    if (progressFill && progressText) {
+        const modules = ["module1", "module2", "module3", "module4", "module5"];
+        let completedCount = 0;
+
+        modules.forEach(mod => {
+            if (localStorage.getItem(mod) === "true") {
+                completedCount++;
+            }
+        });
+
+        let percentage = Math.round((completedCount / modules.length) * 100);
+        
+        // Actualiza la barra y el texto con el porcentaje real
+        progressFill.style.width = percentage + "%";
+        progressText.innerText = percentage + "%";
+    }
+});

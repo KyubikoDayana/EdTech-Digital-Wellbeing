@@ -29,14 +29,6 @@ function setLanguage(lang){
     applyLanguage()
 }
 
-// aplicar idioma al cargar
-window.addEventListener("DOMContentLoaded", () => {
-    currentLanguage = localStorage.getItem("language") || "es"
-    applyLanguage()
-    initSlider()
-})
-
-
 
 // ===== MODULE 1 SLIDER SYSTEM =====
 
@@ -126,19 +118,21 @@ function updateSliderText(){
     slider.style.accentColor = "#76A6A7"; 
     
     // COLOR DEL SLIDER
-if(hours <= 4){
-slider.style.accentColor = "#AACB8C"
-}
-else if(hours <= 8){
-slider.style.accentColor = "#F2A999"
-}
-else{
-slider.style.accentColor = "#e57373"
+    if(hours <= 4){
+        slider.style.accentColor = "#AACB8C"
+    }
+    else if(hours <= 8){
+        slider.style.accentColor = "#F2A999"
+    }
+    else{
+        slider.style.accentColor = "#e57373"
+    }
+
+    // CAMBIO: Se guarda de manera persistente y se actualiza la barra del módulo de inmediato
+    localStorage.setItem("module1", "true")
+    updateGlobalProgress()
 }
 
-sessionStorage.setItem("module1","true")
-
-}
 
 // ===== ACCORDION SYSTEM =====
 
@@ -154,9 +148,39 @@ function initAccordion(){
     });
 }
 
-// iniciar acordeones sin romper nada
+
+// ===== NUEVA FUNCIÓN: CONTROL DE PROGRESO GLOBAL =====
+
+function updateGlobalProgress() {
+    const progressFill = document.querySelector(".progress-fill");
+    if (!progressFill) return;
+
+    // Lista de las claves de tus módulos
+    const modules = ["module1", "module2", "module3", "module4", "module5"];
+    let completedCount = 0;
+
+    // Contamos cuántos módulos tienen valor "true" en el almacenamiento local
+    modules.forEach(mod => {
+        if (localStorage.getItem(mod) === "true") {
+            completedCount++;
+        }
+    });
+
+    // Calculamos el porcentaje basado en tus 5 módulos
+    let percentage = (completedCount / modules.length) * 100;
+    
+    // Asignamos el ancho a la barra de la pantalla
+    progressFill.style.width = percentage + "%";
+}
+
+
+// ===== GLOBAL INITIALIZATION SYSTEM =====
+// Centraliza todas las ejecuciones iniciales en un único bloque limpio
+
 window.addEventListener("DOMContentLoaded", () => {
-    initAccordion();
-});
-
-
+    currentLanguage = localStorage.getItem("language") || "es"
+    applyLanguage()
+    initSlider()
+    initAccordion()
+    updateGlobalProgress() // Calcula el progreso del usuario al entrar a la página
+})
