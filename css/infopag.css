@@ -15,7 +15,7 @@ text-align:center;
 }
 
 .hero-content h1{
-color: #FA7E77; /* Color solicitado para el título principal */
+color: #FA7E77;
 font-size:42px;
 max-width:800px;
 margin:auto;
@@ -27,7 +27,8 @@ font-weight: 700;
 font-size:18px;
 max-width:600px;
 margin:auto;
-color:#2D4C47; /* Texto del hero oscurecido para mejor lectura */
+color:#2D4C47;
+font-weight: 500; /* Texto ligeramente más grueso para legibilidad */
 }
 
 
@@ -51,13 +52,12 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .summary-card h3 {
-color: #2D4C47; /* Título de la tarjeta de lista oscurecido */
+color: #2D4C47;
 font-size: 20px;
 margin-bottom: 16px;
 font-weight: 600;
 }
 
-/* Reemplazo de viñetas por círculos con chulo (SVG integrado) */
 .summary-card ul {
 list-style: none;
 padding-left: 0;
@@ -65,7 +65,7 @@ margin: 0;
 }
 
 .summary-card ul li {
-color: #2D4C47; /* Texto de la lista en color oscuro */
+color: #2D4C47;
 font-size: 15px;
 line-height: 1.5;
 position: relative;
@@ -73,6 +73,7 @@ padding-left: 30px;
 margin-bottom: 12px;
 display: flex;
 align-items: center;
+font-weight: 500; /* Incremento de grosor solicitado */
 }
 
 .summary-card ul li::before {
@@ -81,8 +82,8 @@ position: absolute;
 left: 0;
 width: 18px;
 height: 18px;
-/* Check-circle estilizado con el color oscuro solicitado */
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23446A66'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+/* Color de chulo actualizado exitosamente a #FA8079 (%23FA8079) */
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FA8079'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
 background-size: contain;
 background-repeat: no-repeat;
 }
@@ -107,17 +108,18 @@ transition: transform 0.2s ease;
 }
 
 .info-block h2{
-color: #2D4C47; /* Subtítulos oscurecidos */
+color: #2D4C47;
 font-size: 24px;
 margin-bottom: 14px;
 font-weight: 600;
 }
 
 .info-block p{
-color: #2D4C47; /* Párrafos oscurecidos para máxima legibilidad */
+color: #2D4C47;
 line-height:1.7;
 margin-bottom:14px;
 font-size: 16px;
+font-weight: 500; /* Texto ligeramente más grueso para mitigar problemas de visualización */
 }
 
 /* COLORES PERSONALIZADOS PARA CADA TARJETA DE CONTENIDO */
@@ -127,10 +129,31 @@ font-size: 16px;
 .card-4 { background-color: #F9F6EF !important; }
 
 
+/* CONTROL EXCLUSIVO DEL BOTÓN DE RETORNO PARA INFOPAG */
+.info-container .back-container {
+position: relative !important;
+top: 0 !important;
+display: flex !important;
+justify-content: center !important;
+align-items: center !important;
+width: 100% !important;
+padding: 20px 0 0 0 !important;
+z-index: 10;
+box-sizing: border-box;
+}
+
+.info-container .back-button {
+display: inline-block;
+text-align: center;
+min-width: 200px; /* Le da una mejor proporción horizontal con el texto largo */
+font-weight: 500;
+}
+
+
 /* FOOTER REFINADO */
 .main-footer {
-background-color: #446A66 !important; /* Color solicitado para el fondo */
-color: #FFFFFF !important; /* Letras totalmente blancas */
+background-color: #446A66 !important;
+color: #FFFFFF !important;
 padding: 40px 20px;
 margin-top: 60px;
 }
@@ -162,7 +185,6 @@ align-items: center;
 color: #FFFFFF !important;
 }
 
-/* Iconos integrados en línea */
 .footer-inline-icon {
 width: 16px;
 height: 16px;
@@ -182,14 +204,8 @@ margin: 20px 0;
 .unad-logo {
 max-width: 120px;
 height: auto;
-filter: brightness(0) invert(1); /* Convierte el logo a blanco si es necesario para conservar limpieza visual */
+filter: brightness(0) invert(1);
 opacity: 0.9;
-}
-
-
-/* ACCESIBILIDAD (SE MANTIENE EL ESTILO ORIGINAL) */
-#accessibility-tab {
-/* Conserva tu estilo funcional actual */
 }
 
 
