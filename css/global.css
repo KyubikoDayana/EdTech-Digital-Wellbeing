@@ -320,27 +320,28 @@ transform:translateY(-2px);
 }
 
 /* ==========================================================================
-   SISTEMA DE CURSORES PERSONALIZADOS (REFORZADO)
+   SISTEMA DE CURSORES PERSONALIZADOS (ULTRA REFORZADO - ANTI-FILTROS)
    ========================================================================== */
 
-/* 1. Cursor Normal (Avión de papel) - Forzado para toda la pantalla */
+/* 1. Cursor Normal (Avión de papel) */
 html, body {
     cursor: url('../Archives/images/aviondepapel1fimagen.png'), default !important;
 }
 
-/* 2. Cursor de Selección (Línea de texto) - Solo en textos puros fuera de botones */
+/* 2. Cursor de Selección (Línea de texto) */
 p, h1, h2, h3, h4, h5, h6, span, label, input[type="text"], textarea, li {
     cursor: url('../Archives/images/text1imagen.png'), text;
 }
 
-/* 3. Cursor de Acción (Mano que señala) - Incluye selectores interactivos avanzados y modales */
+/* 3. Cursor de Acción (Mano) - Incluye patrones inteligentes para Cards, Módulos y Accesibilidad */
 a, button, .btn, [role="button"], input[type="submit"], input[type="button"], 
-.quiz-slider, .lang, select, option, details summary, input[type="checkbox"], input[type="radio"] {
+.quiz-slider, .lang, select, option, details summary, input[type="checkbox"], input[type="radio"],
+[class*="card"], [class*="modulo"], [class*="module"], [class*="accesi"], [id*="accesi"] {
     cursor: url('../Archives/images/mano1imagen.png'), pointer !important;
 }
 
-/* 4. LA CLAVE DELÉXITO: Fuerza a que cualquier icono, texto, imagen o elemento 
-   dentro de un botón o menú interactivo mantenga la mano de acción */
-a *, button *, .btn *, [role="button"] *, .quiz-slider *, .lang * {
+/* 4. El Escudo Total: Fuerza a TODOS los elementos hijos (textos, iconos, imágenes) 
+   dentro de botones, tarjetas o menús de accesibilidad a mantener la mano */
+a *, button *, .btn *, [role="button"] *, .quiz-slider *, .lang *,
+[class*="card"] *, [class*="modulo"] *, [class*="module"] *, [class*="accesi"] *, [id*="accesi"] * {
     cursor: url('../Archives/images/mano1imagen.png'), pointer !important;
-}
