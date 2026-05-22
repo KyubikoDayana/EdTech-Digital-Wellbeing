@@ -1,65 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================
-      FALLING LEAVES SYSTEM (Efecto Brisa)
-     ========================= */
-  const leavesContainer = document.getElementById("leaves-container");
-
-  if (leavesContainer) {
-    const leafImages = [
-      "Archives/images/Hoja1imagen.png",
-      "Archives/images/Hoja2imagen.png"
-    ];
-
-    const createLeaf = (isInitial = false) => {
-      const leaf = document.createElement("img");
-      
-      // Selecciona aleatoriamente una de las dos hojas
-      const randomSrc = leafImages[Math.floor(Math.random() * leafImages.length)];
-      leaf.src = randomSrc;
-      leaf.classList.add("leaf");
-
-      // Configuraciones aleatorias para naturalidad
-      const randomLeft = Math.random() * 100; // Posición horizontal (0% a 100%)
-      const randomSize = Math.floor(Math.random() * 11) + 15; // Tamaño pequeño entre 15px y 25px
-      const randomDuration = Math.random() * 6 + 10; // Caída lenta y pacífica entre 10s y 16s
-      const randomDelay = Math.random() * -12; // Retraso negativo para que no salgan todas al mismo tiempo
-
-      leaf.style.left = `${randomLeft}%`;
-      leaf.style.width = `${randomSize}px`;
-      leaf.style.height = "auto";
-      
-      // Aplicamos la animación CSS con sus tiempos variables
-      leaf.style.animation = `fallAndSway ${randomDuration}s linear infinite`;
-      
-      // Si es la carga inicial, esparce las hojas verticalmente para que ya estén cayendo al entrar
-      if (isInitial) {
-        leaf.style.animationDelay = `${randomDelay}s`;
-      }
-
-      leavesContainer.appendChild(leaf);
-
-      // Elimina la hoja una vez termina su ciclo de caída para limpiar el DOM
-      setTimeout(() => {
-        leaf.remove();
-      }, randomDuration * 1000);
-    };
-
-    // Genera 15 hojas distribuidas de inmediato al cargar la página principal
-    for (let i = 0; i < 15; i++) {
-      createLeaf(true);
-    }
-
-    // Sigue creando hojas nuevas de forma infinita y pausada cada 1.5 segundos
-    setInterval(() => {
-      // Limitamos el máximo de hojas en pantalla para cuidar el rendimiento
-      if (document.querySelectorAll(".leaf").length < 25) {
-        createLeaf(false);
-      }
-    }, 1500);
-  }
-
-  /* =========================
       QUIZ SYSTEM
      ========================= */
   const sliders = document.querySelectorAll(".quiz-slider");
