@@ -1,16 +1,13 @@
 
 body{
-
 background-image: url("../Archives/illustrations/fondo-5.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 background-attachment: fixed;
-
 }
 
 /* HERO */
-
 .info-hero{
 background: linear-gradient(180deg,#e6f0ed,#e9f1ef);
 padding:100px 20px 80px;
@@ -18,22 +15,23 @@ text-align:center;
 }
 
 .hero-content h1{
+color: #FA7E77; /* Color solicitado para el título principal */
 font-size:42px;
 max-width:800px;
 margin:auto;
 margin-bottom:20px;
+font-weight: 700;
 }
 
 .hero-content p{
 font-size:18px;
 max-width:600px;
 margin:auto;
-color:#4b6d69;
+color:#2D4C47; /* Texto del hero oscurecido para mejor lectura */
 }
 
 
-/* CARDS */
-
+/* CARDS GENERALES Y RESUMEN (LISTAS) */
 .info-cards{
 display:flex;
 justify-content:center;
@@ -43,13 +41,54 @@ margin-bottom:60px;
 flex-wrap:wrap;
 }
 
-.info-cards .card{
+.info-cards .card.summary-card {
 width:280px;
+background-color: #ffffff;
+border: 1px solid rgba(45, 76, 71, 0.15);
+border-radius: 12px;
+padding: 24px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.summary-card h3 {
+color: #2D4C47; /* Título de la tarjeta de lista oscurecido */
+font-size: 20px;
+margin-bottom: 16px;
+font-weight: 600;
+}
+
+/* Reemplazo de viñetas por círculos con chulo (SVG integrado) */
+.summary-card ul {
+list-style: none;
+padding-left: 0;
+margin: 0;
+}
+
+.summary-card ul li {
+color: #2D4C47; /* Texto de la lista en color oscuro */
+font-size: 15px;
+line-height: 1.5;
+position: relative;
+padding-left: 30px;
+margin-bottom: 12px;
+display: flex;
+align-items: center;
+}
+
+.summary-card ul li::before {
+content: "";
+position: absolute;
+left: 0;
+width: 18px;
+height: 18px;
+/* Check-circle estilizado con el color oscuro solicitado */
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23446A66'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+background-size: contain;
+background-repeat: no-repeat;
 }
 
 
-/* CONTENT */
-
+/* CONTENT (BLOQUES PRINCIPALES) */
 .info-container{
 max-width:1000px;
 margin:auto;
@@ -59,27 +98,115 @@ flex-direction:column;
 gap:30px;
 }
 
+.info-block.card {
+border-radius: 14px;
+padding: 30px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+border: 1px solid rgba(0, 0, 0, 0.03);
+transition: transform 0.2s ease;
+}
+
 .info-block h2{
-margin-bottom:10px;
+color: #2D4C47; /* Subtítulos oscurecidos */
+font-size: 24px;
+margin-bottom: 14px;
+font-weight: 600;
 }
 
 .info-block p{
+color: #2D4C47; /* Párrafos oscurecidos para máxima legibilidad */
 line-height:1.7;
-margin-bottom:10px;
+margin-bottom:14px;
+font-size: 16px;
+}
+
+/* COLORES PERSONALIZADOS PARA CADA TARJETA DE CONTENIDO */
+.card-1 { background-color: #EDD7B5 !important; }
+.card-2 { background-color: #F3E9D0 !important; }
+.card-3 { background-color: #DFE2CD !important; }
+.card-4 { background-color: #F9F6EF !important; }
+
+
+/* FOOTER REFINADO */
+.main-footer {
+background-color: #446A66 !important; /* Color solicitado para el fondo */
+color: #FFFFFF !important; /* Letras totalmente blancas */
+padding: 40px 20px;
+margin-top: 60px;
+}
+
+.main-footer a {
+color: #FFFFFF !important;
+text-decoration: underline;
+}
+
+.footer-container {
+max-width: 1000px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+.footer-info p {
+color: #FFFFFF !important;
+margin-bottom: 10px;
+font-size: 14px;
+display: flex;
+align-items: center;
+}
+
+.footer-info strong {
+color: #FFFFFF !important;
+}
+
+/* Iconos integrados en línea */
+.footer-inline-icon {
+width: 16px;
+height: 16px;
+fill: #FFFFFF;
+margin-right: 10px;
+display: inline-block;
+vertical-align: middle;
+flex-shrink: 0;
+}
+
+.footer-divider {
+border: 0;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+margin: 20px 0;
+}
+
+.unad-logo {
+max-width: 120px;
+height: auto;
+filter: brightness(0) invert(1); /* Convierte el logo a blanco si es necesario para conservar limpieza visual */
+opacity: 0.9;
+}
+
+
+/* ACCESIBILIDAD (SE MANTIENE EL ESTILO ORIGINAL) */
+#accessibility-tab {
+/* Conserva tu estilo funcional actual */
 }
 
 
 /* MOBILE */
-
 @media(max-width:768px){
-
 .hero-content h1{
 font-size:32px;
 }
-
 .info-cards{
 flex-direction:column;
 align-items:center;
 }
-
+.footer-container {
+flex-direction: column;
+text-align: center;
+}
+.footer-info p {
+justify-content: center;
+}
 }
