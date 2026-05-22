@@ -16,7 +16,7 @@ p, li, label, span {
 
 .module-label{
   display:inline-block;
-  background:#F2A999;
+  background:#F3E9D0;
   color:white;
   padding:6px 16px;
   border-radius:20px;
@@ -28,7 +28,7 @@ p, li, label, span {
 .module-title{
   font-size:36px;
   font-weight: 700; 
-  color: #80B574;   
+  color: #33847F;   
   margin-bottom:10px;
 }
 
