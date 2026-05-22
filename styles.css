@@ -118,7 +118,7 @@ p, li, .quiz-item label, .footer-info p, .info-content p, .slider-labels span {
   font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   margin-bottom: 16px;
-  color: #FA7E77; /* CAMBIO: Título principal EdTech-Digital Wellbeing ahora en Coral */
+  color: #d6635d; /* CAMBIO: Título principal EdTech-Digital Wellbeing ahora en Coral */
 }
 
 .hero-text p {
