@@ -689,25 +689,6 @@ body.acc-large p, body.acc-large li, body.acc-large span {
   font-size: 1.18em;
 }
 
-/* ==========================================================================
-   SISTEMA DE CURSORES PERSONALIZADOS
-   ========================================================================== */
-
-/* 1. Cursor Normal (Avión de papel) - Se aplica a toda la pantalla */
-html, body {
-    cursor: url('../Archives/images/aviondepapel1fimagen.png'), default;
-}
-
-/* 2. Cursor de Selección (Línea de texto) - Al pasar sobre textos legibles o inputs */
-p, h1, h2, h3, h4, h5, h6, span, label, input[type="text"], textarea, li {
-    cursor: url('../Archives/images/text1imagen.png'), text;
-}
-
-/* 3. Cursor de Acción (Mano que señala) - Al pasar sobre enlaces, botones y elementos interactivos */
-a, button, .btn, [role="button"], input[type="submit"], input[type="button"], .quiz-slider, .lang {
-    cursor: url('../Archives/images/mano1imagen.png'), pointer;
-}
-
 
 /* ===== RESPONSIVE ===== */
 @media (max-width:768px) {
