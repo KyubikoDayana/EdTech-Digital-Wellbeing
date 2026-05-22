@@ -88,8 +88,7 @@ display:block;
 #accessibility-container {
   position: fixed;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 110px; /* Ubicación fija cerca de la barra de navegación */
   z-index: 9999;
   display: flex;
   align-items: stretch;
@@ -100,7 +99,6 @@ display:block;
   background: #FA7E77;
   color: white;
   padding: 8px;
-  font-size: 16px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -117,6 +115,13 @@ display:block;
 #accessibility-tab:hover {
   background: #f45c55;
   transform: scale(1.05);
+}
+
+/* NUEVO ESTILO PARA LA IMAGEN DEL ICONO */
+.acc-tab-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 /* PANEL */
@@ -161,10 +166,10 @@ display:block;
 
 /* ===== NUEVO ESCALADO ACCESIBLE ===== */
 body.acc-large {
-  font-size: 118%; /* Aumenta un 18% los textos */
+  font-size: 118%;
 }
 
 body.acc-large h1, body.acc-large h2, body.acc-large h3, 
 body.acc-large p, body.acc-large li, body.acc-large span {
-  font-size: 1.18em; /* Multiplica su tamaño base actual por 1.18 */
+  font-size: 1.18em;
 }
