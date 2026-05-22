@@ -92,8 +92,8 @@ display:block;
   display: flex;
   align-items: stretch;
 
-  /* FIX: Desplazamos todo el contenedor 220px (el ancho del panel) a la derecha */
-  transform: translateX(220px);
+  /* AJUSTE: Mover 256px (220px de ancho + 36px totales de padding) para ocultarlo por completo */
+  transform: translateX(256px);
   transition: transform 0.3s ease;
 }
 
@@ -139,7 +139,6 @@ display:block;
   padding: 18px;
   box-shadow: -6px 6px 16px rgba(0,0,0,0.15);
   border-radius: 0 0 0 10px;
-  /* FIX: Eliminamos el transform individual de aquí para evitar el conflicto de espacio */
 }
 
 /* TÍTULO */
