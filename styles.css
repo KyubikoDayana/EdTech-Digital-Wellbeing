@@ -151,7 +151,10 @@ p, li, .quiz-item label, .footer-info p, .info-content p, .slider-labels span {
 
 /* CONTENT */
 .content {
-  padding: 40px;
+  flex: 1;
+  max-width: 500px;
+  padding: 0;
+  margin: 0; /* CORRECCIÓN: Eliminados margin-left y margin-top para perfecta alineación y fluidez */
 }
 
 /* QUIZ */
@@ -345,7 +348,7 @@ section {
 .info-background { 
   display: flex;
   justify-content: center; 
-  align-items: flex-start; 
+  align-items: flex-start; /* Mantiene ambos elementos perfectamente alineados por arriba */
   background-image: url("Archives/illustrations/fondo-2.jpg");
   background-size: cover;
   background-position: center top;
@@ -353,14 +356,6 @@ section {
   padding: 80px 5%; 
   gap: 50px; 
   min-height: 500px; 
-}
-
-.content {
-  flex: 1;
-  max-width: 500px;
-  padding: 0;
-  margin-left: 160px;   
-  margin-top: 60px;    
 }
 
 /* Seccion informacion abajo */
@@ -374,7 +369,7 @@ section {
 
 .informacion-title {
   font-size: 28px;
-  color: #355E5A; /* CAMBIO: Título "Why is Digital Wellbeing Important?" ahora en Coral */
+  color: #355E5A; 
   margin-bottom: 40px;
   font-weight: var(--fw-bold);
 }
@@ -416,7 +411,7 @@ section {
 
 .info-content h4 {
   margin: 0 0 10px 0;
-  color: #80B574; /* CAMBIO: Títulos de tarjetas inferiores (Balance Academic..., etc) ahora en Verde Confortable */
+  color: #80B574; 
   font-weight: var(--fw-bold);
 }
 
@@ -512,7 +507,7 @@ section {
 .info-box-white h3 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #FA7E77; /* CAMBIO: Título "What is EdTech?" ahora en Coral */
+  color: #FA7E77; 
   font-weight: var(--fw-bold);
 }
 
@@ -608,7 +603,7 @@ section {
 .module-title {
   font-size:16px;
   font-weight: var(--fw-bold);
-  color: #FCA292; /* CAMBIO: Títulos "Module 1, 2, 3..." ahora en Coral */
+  color: #FCA292; 
   margin-bottom:3px;
   display:block;
 }
@@ -782,8 +777,6 @@ body.acc-large p, body.acc-large li, body.acc-large span {
   }
 
   .content {
-    margin-left: 0;
-    margin-top: 0;
     max-width: 100%;
   }
 }
