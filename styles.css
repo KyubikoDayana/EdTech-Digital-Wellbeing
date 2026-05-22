@@ -1,5 +1,4 @@
 
-
 :root {
   --primary: #7FB8A6;
   --secondary: #FA7E77;
@@ -31,6 +30,11 @@ font-family:'Poppins', sans-serif;
 margin:0;
 background:#e9f1ef;
 color:#355e5a;
+}
+
+/* MEJORA: Aumento de grosor en textos comunes que se sentían delgados */
+p, li, .quiz-item label, .footer-info p {
+  font-weight: var(--fw-medium);
 }
 
 /* NAVBAR */
@@ -506,22 +510,30 @@ section {
   line-height: 1.5;
 }
 
+/* MEJORA: Cambio del color solicitado para el botón de la imagen "Next" y su flecha */
 .btn-card {
   margin-top: 15px;
   background: #E8F4F1;
   border: none;
   padding: 8px 20px;
   border-radius: 15px;
-  color: #7FB8A6;
+  color: #316867;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 }
+
+.btn-card:hover {
+  background: #316867;
+  color: white;
+}
+
 /*Footer*/
 .main-footer {
-  background-color: #7FB8A6; /* Tu color solicitado */
+  background-color: #446A66; /* MEJORA: Color de fondo modificado */
   color: white;
   padding: 40px 80px;
-  margin-top: 0; /* Se une perfectamente con la sección de información */
+  margin-top: 0; 
 }
 
 .footer-container {
@@ -536,16 +548,28 @@ section {
   max-width: 600px;
 }
 
-.footer-info p {
+/* MEJORA: Todas las letras del footer garantizadas en blanco */
+.footer-info p, .footer-info strong, .footer-info span {
   margin: 5px 0;
   font-size: 14px;
   line-height: 1.4;
+  color: #FFFFFF !important;
 }
 
 .footer-info a {
-  color: white;
+  color: #FFFFFF !important;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Estilo para los iconos vectoriales inline del footer */
+.footer-svg {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 6px;
+  display: inline-block;
+  color: #FFFFFF;
 }
 
 .footer-divider {
@@ -555,9 +579,9 @@ section {
 }
 
 .unad-logo {
-  max-width: 180px; /* Ajusta el tamaño del logo */
+  max-width: 180px; 
   height: auto;
-  filter: brightness(0) invert(1); /* Opcional: vuelve el logo blanco si es oscuro */
+  filter: brightness(0) invert(1); 
 }
 
 /* Ajuste para móviles */
@@ -754,14 +778,6 @@ margin-bottom:3px;
 display:block;
 }
 
-.module-title{
-font-size:16px;
-font-weight:700;
-color:#4A6A65;
-margin-bottom:3px;
-display:block;
-}
-
 /* ===== HOME FIX (SOLO AJUSTES RESPONSIVE) ===== */
 
 @media (max-width:768px){
@@ -867,17 +883,15 @@ text-align:center;
 #accessibility-container {
   position: fixed;
   right: 0;
-  top: 110px; /* Ubicación fija cerca de la barra de navegación */
+  top: 110px; 
   z-index: 9999;
   display: flex;
   align-items: stretch;
-
-  /* AJUSTE: Mover 256px (220px de ancho + 36px totales de padding) para ocultarlo por completo */
   transform: translateX(256px);
   transition: transform 0.3s ease;
 }
 
-/* CUANDO ESTÁ ACTIVO: El contenedor completo vuelve a su posición original */
+/* CUANDO ESTÁ ACTIVO */
 #accessibility-container.active {
   transform: translateX(0);
 }
@@ -905,7 +919,6 @@ text-align:center;
   transform: scale(1.05);
 }
 
-/* NUEVO ESTILO PARA LA IMAGEN DEL ICONO */
 .acc-tab-icon {
   width: 24px;
   height: 24px;
