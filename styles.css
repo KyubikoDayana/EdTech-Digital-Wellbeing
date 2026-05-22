@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 :root {
   --primary: #7FB8A6;
@@ -113,6 +114,7 @@ p, li, .quiz-item label, .footer-info p, .info-content p, .slider-labels span {
 }
 
 .hero-text h1 {
+  font-family: 'Playfair Display', serif; /* CAMBIO: Nueva tipografía premium elegida */
   font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   margin-bottom: 16px;
