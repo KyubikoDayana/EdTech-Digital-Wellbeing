@@ -320,20 +320,27 @@ transform:translateY(-2px);
 }
 
 /* ==========================================================================
-   SISTEMA DE CURSORES PERSONALIZADOS
+   SISTEMA DE CURSORES PERSONALIZADOS (REFORZADO)
    ========================================================================== */
 
-/* 1. Cursor Normal (Avión de papel) - Se aplica a toda la pantalla */
+/* 1. Cursor Normal (Avión de papel) - Forzado para toda la pantalla */
 html, body {
-    cursor: url('../Archives/images/aviondepapel1fimagen.png'), default;
+    cursor: url('../Archives/images/aviondepapel1fimagen.png'), default !important;
 }
 
-/* 2. Cursor de Selección (Línea de texto) - Al pasar sobre textos legibles o inputs */
+/* 2. Cursor de Selección (Línea de texto) - Solo en textos puros fuera de botones */
 p, h1, h2, h3, h4, h5, h6, span, label, input[type="text"], textarea, li {
     cursor: url('../Archives/images/text1imagen.png'), text;
 }
 
-/* 3. Cursor de Acción (Mano que señala) - Al pasar sobre enlaces, botones y elementos interactivos */
-a, button, .btn, [role="button"], input[type="submit"], input[type="button"], .quiz-slider, .lang {
-    cursor: url('../Archives/images/mano1imagen.png'), pointer;
+/* 3. Cursor de Acción (Mano que señala) - Incluye selectores interactivos avanzados y modales */
+a, button, .btn, [role="button"], input[type="submit"], input[type="button"], 
+.quiz-slider, .lang, select, option, details summary, input[type="checkbox"], input[type="radio"] {
+    cursor: url('../Archives/images/mano1imagen.png'), pointer !important;
+}
+
+/* 4. LA CLAVE DELÉXITO: Fuerza a que cualquier icono, texto, imagen o elemento 
+   dentro de un botón o menú interactivo mantenga la mano de acción */
+a *, button *, .btn *, [role="button"] *, .quiz-slider *, .lang * {
+    cursor: url('../Archives/images/mano1imagen.png'), pointer !important;
 }
