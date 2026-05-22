@@ -570,7 +570,7 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #FA7E77; 
+  background-color: #355E5A; 
   color: #FFFFFF;           
   padding: 12px 35px;
   font-size: 16px;
@@ -608,7 +608,7 @@ section {
 .module-title {
   font-size:16px;
   font-weight: var(--fw-bold);
-  color: #FA7E77; /* CAMBIO: Títulos "Module 1, 2, 3..." ahora en Coral */
+  color: #FCA292; /* CAMBIO: Títulos "Module 1, 2, 3..." ahora en Coral */
   margin-bottom:3px;
   display:block;
 }
