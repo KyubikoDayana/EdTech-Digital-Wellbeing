@@ -345,3 +345,4 @@ a, button, .btn, [role="button"], input[type="submit"], input[type="button"],
 a *, button *, .btn *, [role="button"] *, .quiz-slider *, .lang *,
 [class*="card"] *, [class*="modulo"] *, [class*="module"] *, [class*="accesi"] *, [id*="accesi"] * {
     cursor: url('../Archives/images/mano1imagen.png'), pointer !important;
+    }
